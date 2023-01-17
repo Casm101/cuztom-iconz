@@ -1,4 +1,4 @@
-import { Library, Navigation, SiteHeader } from "@/components";
+import { Library, Navigation, Showcase, SiteHeader } from "@/components";
 
 export default function Home() {
   return (
@@ -6,7 +6,66 @@ export default function Home() {
       <SiteHeader />
       <Navigation />
       <Library>
-        
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
+        <Showcase />
       </Library>
     </>
   );
