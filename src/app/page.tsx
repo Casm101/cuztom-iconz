@@ -1,10 +1,13 @@
-import { Navigation, SiteHeader } from "@/components";
+import { Library, Navigation, SiteHeader } from "@/components";
 
 export default function Home() {
   return (
-		<>
-			<SiteHeader />
-			<Navigation />
-		</>
+    <>
+      <SiteHeader />
+      <Navigation />
+      <Library>
+        
+      </Library>
+    </>
   );
 }
