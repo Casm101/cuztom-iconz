@@ -1,0 +1,32 @@
+.site-header {
+	width: 100%;
+	height: 40vh;
+	padding: 2rem;
+
+	background-color: lightsalmon;
+
+	.header-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+
+		padding: 4rem 0rem;
+
+		.main-info {
+			display: flex;
+			justify-content: space-evenly;
+		}
+		.main-title {
+
+		}
+		.main-docs {
+		}
+	}
+}
