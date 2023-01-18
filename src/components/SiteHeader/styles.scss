@@ -1,14 +1,27 @@
 .site-header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 100%;
 	height: 40vh;
 	padding: 2rem;
 
-	background-color: lightsalmon;
+	background-image: url("/public/svg.png");
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 1130px;
+	}
 
 	.header-top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		width: 100%;
 	}
 
 	.header-main {
@@ -17,16 +30,26 @@
 		align-items: center;
 		gap: 2rem;
 
-		padding: 4rem 0rem;
+		width: 700px;
+
+		padding-top: 3rem;
+		padding-bottom: 6rem;
+
+		z-index: 2;
 
 		.main-info {
 			display: flex;
 			justify-content: space-evenly;
+			width: 50%;
+			font-size: .8rem;
 		}
 		.main-title {
-
+			text-align: center;
 		}
 		.main-docs {
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
 		}
 	}
 }
