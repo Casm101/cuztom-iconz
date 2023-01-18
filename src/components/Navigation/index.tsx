@@ -15,6 +15,8 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <div className={`navigation ${scrolled && "sticky"}`}>Navigation Bar</div>
+    <div className={`navigation ${scrolled && "sticky"}`}>
+      <div className="content">Navigation Bar</div>
+    </div>
   );
 };
