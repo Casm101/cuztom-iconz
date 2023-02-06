@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-export const SiteHeader = ({}) => {
+export const SiteHeader = ({ icons }: any ) => {
 	return (
     <header className="site-header">
       <div className="content">
@@ -10,7 +10,7 @@ export const SiteHeader = ({}) => {
         </div>
         <div className="header-main">
           <div className="main-info">
-            <span>123 icons</span>
+            <span>{icons.length} icons</span>
             <span>·</span>
             <span>OGL license</span>
             <span>·</span>
@@ -20,7 +20,7 @@ export const SiteHeader = ({}) => {
           </div>
           <div className="main-title">
             <h1>
-              Beautiful hand-crafted SVG icons, by the coders of SafeGuru.
+              Beautiful hand-crafted SVG icons, by the coders of Fathom3Dev.
             </h1>
           </div>
           <div className="main-docs">
