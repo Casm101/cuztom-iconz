@@ -1,8 +1,7 @@
 .library {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: .5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+	gap: 2rem 1.5rem;
 	
 	padding: 3rem 2rem;
 	margin-left: auto;
