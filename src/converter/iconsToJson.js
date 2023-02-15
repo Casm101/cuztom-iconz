@@ -28,6 +28,7 @@ const BlackToCurrentColorSVGOPlugin = {
   }),
 };
 
+
 // Retrieve all SVG files from given path
 const svgFiles = readdirSync(ICONS_DIR)
   .filter(f => path.extname(f) === '.svg');
@@ -74,9 +75,25 @@ const convertedContents = svgFiles.map(async (filename) => {
     ],
   });
 
+	// Icon custom component
+	const icon = `<Icon name="${iconName}" />`;
+
+	// Generic icon component (can be used without integrating Cuztom Iconz)
+	const jsx = `
+		const icon_${iconName} = () => {
+			return (
+				${optimized}
+			)
+		}
+	`;
+
   return [
     iconName,
-    optimized,
+    {
+			svg: optimized,
+			jsx: jsx,
+			component: icon,
+		},
   ];
 });
 

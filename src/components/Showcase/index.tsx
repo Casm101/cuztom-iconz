@@ -8,7 +8,7 @@ export const Showcase = ({ name }: any) => {
 
 	const copyToClipboard = (data: string) => navigator.clipboard.writeText(data.toString());
 
-	const svg = CuztomIconz[name];
+	const { svg, jsx, component } = CuztomIconz[name as keyof typeof CuztomIconz];
 
 	return (
     <div className="showcase">
@@ -18,10 +18,10 @@ export const Showcase = ({ name }: any) => {
 				</div>
         <div className="container-overlay">
           <button onClick={() => copyToClipboard(svg)}>copy SVG</button>
-					<button onClick={() => copyToClipboard('jsx')}>copy JSX</button>
+					<button onClick={() => copyToClipboard(jsx)}>copy JSX</button>
         </div>
       </div>
       <p className="showcase-title">{name}</p>
     </div>
   );
-}
+};
