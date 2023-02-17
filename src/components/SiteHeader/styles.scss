@@ -50,6 +50,10 @@
 			display: flex;
 			justify-content: space-between;
 			width: 50%;
+
+			a:hover {
+				border-bottom: 1px solid grey;
+			}
 		}
 	}
 }

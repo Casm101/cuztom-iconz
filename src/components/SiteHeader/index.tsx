@@ -20,12 +20,12 @@ export const SiteHeader = ({ icons }: any ) => {
           </div>
           <div className="main-title">
             <h1>
-              Beautiful hand-crafted SVG icons, by the coders of Fathom3Dev.
+              Beautiful hand-crafted icon library, by the coders of Fathom3Dev.
             </h1>
           </div>
           <div className="main-docs">
-            <span>Documentation</span>
-            <span>Get cuztom-iconz</span>
+						<span><a href="https://github.com/Casm101/cuztom-iconz#readme">Documentation</a></span>
+						<span><a href="https://github.com/Casm101/cuztom-iconz">Get cuztom-iconz</a></span>
           </div>
         </div>
       </div>
