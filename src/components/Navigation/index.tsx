@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Search } from "../Search";
 import "./styles.scss";
 
-export const Navigation = () => {
+export const Navigation = ({ handleSearch }: any) => {
   // Manage sticky state of navigation
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
@@ -18,7 +18,7 @@ export const Navigation = () => {
   return (
     <div className={`navigation ${scrolled && "sticky"}`}>
       <div className="content">
-				<Search />
+				<Search setSearchString={handleSearch} />
 			</div>
     </div>
   );
