@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Search } from "../Search";
 import "./styles.scss";
 
 export const Navigation = () => {
@@ -16,7 +17,9 @@ export const Navigation = () => {
 
   return (
     <div className={`navigation ${scrolled && "sticky"}`}>
-      <div className="content">Navigation Bar</div>
+      <div className="content">
+				<Search />
+			</div>
     </div>
   );
 };

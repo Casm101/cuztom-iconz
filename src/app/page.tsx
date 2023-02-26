@@ -1,25 +1,54 @@
+"use client";
 import { Icon, Library, Navigation, Showcase, SiteHeader } from "@/components";
+import { useEffect, useState } from "react";
 import CuztomIconz from "../icons/optimized-icons";
 
-const genIconShowcase = () => {
-	
+
+const getAllIconNames = () => {
 	const iconArray = [];
-	for (let icon in CuztomIconz) {
-		iconArray.push(<Showcase name={icon} />)
+	for (let name in CuztomIconz) {
+		iconArray.push(name)
 	}
 	return iconArray;
 }
 
+const genIconShowcase = (nameArray: string[]) => {
+	const newArray = [];
+	for (let iconName in nameArray) {
+		console.log(iconName);
+		newArray.push(<Icon name={iconName} />)
+	}
+	return newArray;
+}
+
+// Function to filter out search from array
+const fiterArray = (filterString: string, dataSet: string[]) => {
+	const parsedFilterString = filterString.replace(' ', '');
+
+	if (parsedFilterString === '') return dataSet;
+	return dataSet.filter(item => item.includes(parsedFilterString));
+};
+
+
 export default function Home() {
 
-	const iconArray = genIconShowcase();
+	// Stateful variable declarations for search
+	const [searchValue, setSearchValue] = useState('');
+	const [iconNames, setIconNames] = useState<string[]>([]);
+	const [icons, setIcons] = useState<any[]>([])
+
+	useEffect(() => {
+		setIconNames(getAllIconNames);
+		const filteredNames = fiterArray(searchValue, iconNames);
+		setIcons(genIconShowcase(filteredNames));
+	}, [searchValue, iconNames])
 
   return (
     <>
-      <SiteHeader icons={iconArray} />
+			<SiteHeader icons={iconNames} />
       <Navigation />
       <Library>
-				{iconArray}
+				{icons}
       </Library>
     </>
   );
